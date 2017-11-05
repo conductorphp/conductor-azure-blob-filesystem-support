@@ -31,8 +31,8 @@ class AzureBlobAdapterFactory implements FactoryInterface
     {
         $endpoint = sprintf(
             'DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s',
-            $options['account_name'],
-            $options['api_key']
+            $options['client']['account_name'],
+            $options['client']['account_key']
         );
 
         /** @var IBlob $blobRestProxy */

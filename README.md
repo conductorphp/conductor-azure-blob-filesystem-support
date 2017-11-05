@@ -12,9 +12,12 @@ return [
     'filesystem' => [
         'adapters' => [
             'myazureadapter' => [
-                'api_key' => 'myapikey',
-                'application_name' => 'myapplicationname',
+                'client' => [
+                    'account_key' => 'myaccountkey',
+                    'account_name' => 'myaccountname',
+                ],
                 'container' => 'mycontainer',
+                'prefix' => '',
             ],
         ],
     ],
