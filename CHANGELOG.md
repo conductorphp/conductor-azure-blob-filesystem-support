@@ -1,5 +1,9 @@
 Robofirm DevOps Tool: Azure Blob Filesystem Support
 ===============================================
 
+# 0.1.1 (Unreleased)
+- Renamed AzureBlobAdapter to AzureAdapter
+- Added explicit parsing and validations of AzureAdapterFactory passed 
+
 # 0.1.0
 - Initial build
