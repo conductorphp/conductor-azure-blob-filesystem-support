@@ -50,7 +50,7 @@ class AzureAdapterFactory implements FactoryInterface
      * @param array $options
      * @throws Exception\InvalidArgumentException if options invalid
      */
-    private function validateOptions(array $options)
+    private function validateOptions(array $options): void
     {
         $requiredOptions = ['client', 'container'];
         $allowedOptions = ['client', 'container', 'prefix'];
