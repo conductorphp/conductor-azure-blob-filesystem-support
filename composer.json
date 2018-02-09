@@ -10,6 +10,9 @@
             "email": "kmadera@robofirm.com"
         }
     ],
+    "config": {
+        "sort-packages": true
+    },
     "require": {
         "php": "^7.1",
         "league/flysystem-azure": "^1.0"
