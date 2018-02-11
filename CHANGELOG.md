@@ -1,7 +1,8 @@
-Robofirm DevOps Tool: Azure Blob Filesystem Support
+Conductor: Azure Blob Filesystem Support
 ===============================================
 
 # 0.2.0 (Unreleased)
+- Renamed to Conductor
 - Updated PHP version requirement to 7.1
 
 # 0.1.1 (Unreleased)

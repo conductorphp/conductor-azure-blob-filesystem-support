@@ -1,6 +1,6 @@
 <?php
 
-namespace DevopsToolAzureBlobFilesystemSupport\Adapter;
+namespace ConductorAzureBlobFilesystemSupport\Adapter;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
@@ -10,7 +10,7 @@ use MicrosoftAzure\Storage\Common\ServicesBuilder;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
-use DevopsToolAzureBlobFilesystemSupport\Exception;
+use ConductorAzureBlobFilesystemSupport\Exception;
 
 class AzureAdapterFactory implements FactoryInterface
 {

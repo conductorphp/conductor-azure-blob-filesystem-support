@@ -1,9 +1,9 @@
 {
-    "name": "robofirm/devops-tool-azure-blob-filesystem-support",
-    "description": "Robofirm DevOps Tool: Azure Blob Filesystem Support",
+    "name": "conductor/azure-blob-filesystem-support",
+    "description": "Conductor: Azure Blob Filesystem Support",
     "type": "library",
-    "homepage": "https://bitbucket.org/robofirm/devops-tool-azure-blob-filesystem-support",
-    "license": "MIT",
+    "homepage": "https://github.com/conductorphp/conductor-azure-blob-filesystem-support",
+    "license": "Apache 2.0",
     "authors": [
         {
             "name": "Kirk Madera",
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DevopsToolAzureBlobFilesystemSupport\\": "src/"
+            "ConductorAzureBlobFilesystemSupport\\": "src/"
         }
     },
     "extra": {
         "zf": {
-            "config-provider": "DevopsToolAzureBlobFilesystemSupport\\ConfigProvider"
+            "config-provider": "ConductorAzureBlobFilesystemSupport\\ConfigProvider"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace DevopsToolAzureBlobFilesystemSupport;
+namespace ConductorAzureBlobFilesystemSupport;
 
 return [
     'factories' => [

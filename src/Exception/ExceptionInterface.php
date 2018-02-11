@@ -1,6 +1,6 @@
 <?php
 
-namespace DevopsToolAzureBlobFilesystemSupport\Exception;
+namespace ConductorAzureBlobFilesystemSupport\Exception;
 
 interface ExceptionInterface
 {
