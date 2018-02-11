@@ -15,6 +15,7 @@
     },
     "require": {
         "php": "^7.1",
+        "conductor/core": "*",
         "league/flysystem-azure": "^1.0"
     },
     "autoload": {
