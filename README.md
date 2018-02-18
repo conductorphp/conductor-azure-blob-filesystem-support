@@ -12,12 +12,15 @@ return [
     'filesystem' => [
         'adapters' => [
             'myazureadapter' => [
-                'client' => [
-                    'account_key' => 'myaccountkey',
-                    'account_name' => 'myaccountname',
+                'class'     => \League\Flysystem\Azure\AzureAdapter::class,
+                'arguments' => [
+                    'client' => [
+                        'account_key' => 'myaccountkey',
+                        'account_name' => 'myaccountname',
+                    ],
+                    'container' => 'mycontainer',
+                    'prefix' => '',
                 ],
-                'container' => 'mycontainer',
-                'prefix' => '',
             ],
         ],
     ],
