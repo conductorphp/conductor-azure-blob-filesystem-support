@@ -1,6 +1,9 @@
 Microsoft Azure Blob Filesystem Support
 =======================================
 
+# 0.9.2
+- Fixed license per https://spdx.org/licenses/
+
 # 0.9.1
 - Added initial documentation structure
 
