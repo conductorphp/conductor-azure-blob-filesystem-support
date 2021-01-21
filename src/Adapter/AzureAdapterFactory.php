@@ -7,9 +7,9 @@ use Interop\Container\Exception\ContainerException;
 use League\Flysystem\Azure\AzureAdapter;
 use MicrosoftAzure\Storage\Blob\Internal\IBlob;
 use MicrosoftAzure\Storage\Common\ServicesBuilder;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use ConductorAzureBlobFilesystemSupport\Exception;
 
 class AzureAdapterFactory implements FactoryInterface
