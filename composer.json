@@ -1,6 +1,6 @@
 {
     "name": "conductor/azure-blob-filesystem-support",
-    "description": "Conductor: Azure Blob Filesystem Support",
+    "description": "Conductor Azure Blob Filesystem Support",
     "type": "library",
     "homepage": "https://github.com/conductorphp/conductor-azure-blob-filesystem-support",
     "license": "Apache-2.0",
