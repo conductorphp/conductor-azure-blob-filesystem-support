@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd08a94e0b316578a0011262b016e7c4",
+    "content-hash": "c82fdea8f76296b2fd35a649a8f650fd",
     "packages": [
         {
             "name": "amphp/amp",
@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/conductorphp/conductor-core.git",
-                "reference": "25fbdce2b313cf1bda9a57f9f6964ad5eef73f98"
+                "reference": "409160907323d44fa2248277c7f9d3c0c4e8e5d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/conductorphp/conductor-core/zipball/25fbdce2b313cf1bda9a57f9f6964ad5eef73f98",
-                "reference": "25fbdce2b313cf1bda9a57f9f6964ad5eef73f98",
+                "url": "https://api.github.com/repos/conductorphp/conductor-core/zipball/409160907323d44fa2248277c7f9d3c0c4e8e5d8",
+                "reference": "409160907323d44fa2248277c7f9d3c0c4e8e5d8",
                 "shasum": ""
             },
             "require": {
@@ -152,29 +152,7 @@
                     "ConductorCore\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ConductorCoreTest\\": "test/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "phpunit --colors=always --coverage-clover clover.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -188,10 +166,10 @@
             "description": "Conductor Core",
             "homepage": "https://github.com/conductorphp/conductor-core",
             "support": {
-                "source": "https://github.com/conductorphp/conductor-core/tree/1.0.0",
-                "issues": "https://github.com/conductorphp/conductor-core/issues"
+                "issues": "https://github.com/conductorphp/conductor-core/issues",
+                "source": "https://github.com/conductorphp/conductor-core/tree/1.0.0"
             },
-            "time": "2021-01-21T21:13:29+00:00"
+            "time": "2021-01-21T22:55:33+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -621,14 +599,14 @@
             },
             "conflict": {
                 "laminas/laminas-code": "<3.3.1",
-                "laminas/laminas-code": "<3.3.1"
+                "zendframework/zend-code": "<3.3.1"
             },
             "provide": {
                 "container-interop/container-interop-implementation": "^1.2",
                 "psr/container-implementation": "^1.0"
             },
             "replace": {
-                "laminas/laminas-servicemanager": "^3.4.0"
+                "zendframework/zend-servicemanager": "^3.4.0"
             },
             "require-dev": {
                 "composer/package-versions-deprecated": "^1.0",
@@ -704,7 +682,7 @@
                 "php": "^7.3 || ^8.0"
             },
             "replace": {
-                "laminas/laminas-stdlib": "^3.2.1"
+                "zendframework/zend-stdlib": "^3.2.1"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
@@ -3247,7 +3225,7 @@
                 "squizlabs/php_codesniffer": "^2.7"
             },
             "replace": {
-                "laminas/laminas-coding-standard": "self.version"
+                "zendframework/zend-coding-standard": "self.version"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
