@@ -1,5 +1,5 @@
-Microsoft Azure Blob Filesystem Support
-=======================================
+Conductor Microsoft Azure Blob Filesystem Support
+=================================================
 
 This module adds [Conductor](https://github.com/conductorphp/conductor-core) 
 support for Microsoft Azure Blob filesystem.
