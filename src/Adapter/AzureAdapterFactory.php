@@ -4,9 +4,8 @@ namespace ConductorAzureBlobFilesystemSupport\Adapter;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
-use League\Flysystem\Azure\AzureAdapter;
-use MicrosoftAzure\Storage\Blob\Internal\IBlob;
-use MicrosoftAzure\Storage\Common\ServicesBuilder;
+use AzureOss\Storage\Blob\BlobServiceClient;
+use AzureOss\Storage\BlobFlysystem\AzureBlobStorageAdapter;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\Exception\ServiceNotFoundException;
 use Laminas\ServiceManager\Factory\FactoryInterface;
@@ -36,14 +35,14 @@ class AzureAdapterFactory implements FactoryInterface
         $azureContainer = $options['container'];
         $prefix = isset($options['prefix']) ? $options['prefix'] : null;
 
-        $endpoint = sprintf(
-            'DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s',
+        $connectionString = sprintf(
+            'DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s;EndpointSuffix=core.windows.net',
             $client['account_name'],
             $client['account_key']
         );
-        /** @var IBlob $blobRestProxy */
-        $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($endpoint);
-        return new AzureAdapter($blobRestProxy, $azureContainer, $prefix);
+        $containerClient = BlobServiceClient::fromConnectionString($connectionString)
+            ->getContainerClient($azureContainer);
+        return new AzureBlobStorageAdapter($containerClient, $prefix ?? '');
     }
 
     /**
@@ -60,7 +59,7 @@ class AzureAdapterFactory implements FactoryInterface
             throw new Exception\InvalidArgumentException(
                 sprintf(
                     'Missing %s constructor options: %s',
-                    AzureAdapter::class,
+                    AzureBlobStorageAdapter::class,
                     implode(', ', $missingRequiredOptions)
                 )
             );
@@ -71,7 +70,7 @@ class AzureAdapterFactory implements FactoryInterface
             throw new Exception\InvalidArgumentException(
                 sprintf(
                     'Invalid %s constructor options: %s',
-                    AzureAdapter::class,
+                    AzureBlobStorageAdapter::class,
                     implode(', ', $disallowedOptions)
                 )
             );

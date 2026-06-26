@@ -1,3 +1,10 @@
+[3.0.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/2.0.0...3.0.0) (2026-06-26)
+
+### Bug Fixes
+* to flysystem 3 (azure-oss) and conductor 2.0 (CTAP-776) ([493d960](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/493d9604be9c5345d2a490b3452922e6a3be5bc4))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [1.0.1](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/1.0.0...1.0.1) (2026-06-25)
 
 ### Bug Fixes
