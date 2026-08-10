@@ -2,48 +2,33 @@
 
 namespace ConductorAzureBlobFilesystemSupport\Adapter;
 
-use Interop\Container\ContainerInterface;
-use Interop\Container\Exception\ContainerException;
-use League\Flysystem\Azure\AzureAdapter;
-use MicrosoftAzure\Storage\Blob\Internal\IBlob;
-use MicrosoftAzure\Storage\Common\ServicesBuilder;
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
-use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use AzureOss\Storage\Blob\BlobServiceClient;
+use AzureOss\Storage\BlobFlysystem\AzureBlobStorageAdapter;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 use ConductorAzureBlobFilesystemSupport\Exception;
+use Psr\Container\ContainerInterface;
 
 class AzureAdapterFactory implements FactoryInterface
 {
-
-    /**
-     * Create an object
-     *
-     * @param  ContainerInterface $container
-     * @param  string             $requestedName
-     * @param  null|array         $options
-     *
-     * @return object
-     * @throws ServiceNotFoundException if unable to resolve the service.
-     * @throws ServiceNotCreatedException if an exception is raised when
-     *     creating a service.
-     * @throws ContainerException if any other error occurs
-     */
-    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
-    {
+    public function __invoke(
+        ContainerInterface $container,
+        $requestedName,
+        ?array $options = null
+    ): AzureBlobStorageAdapter {
         $this->validateOptions($options);
 
         $client = $options['client'];
         $azureContainer = $options['container'];
         $prefix = isset($options['prefix']) ? $options['prefix'] : null;
 
-        $endpoint = sprintf(
-            'DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s',
+        $connectionString = sprintf(
+            'DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s;EndpointSuffix=core.windows.net',
             $client['account_name'],
             $client['account_key']
         );
-        /** @var IBlob $blobRestProxy */
-        $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($endpoint);
-        return new AzureAdapter($blobRestProxy, $azureContainer, $prefix);
+        $containerClient = BlobServiceClient::fromConnectionString($connectionString)
+            ->getContainerClient($azureContainer);
+        return new AzureBlobStorageAdapter($containerClient, $prefix ?? '');
     }
 
     /**
@@ -60,7 +45,7 @@ class AzureAdapterFactory implements FactoryInterface
             throw new Exception\InvalidArgumentException(
                 sprintf(
                     'Missing %s constructor options: %s',
-                    AzureAdapter::class,
+                    AzureBlobStorageAdapter::class,
                     implode(', ', $missingRequiredOptions)
                 )
             );
@@ -71,7 +56,7 @@ class AzureAdapterFactory implements FactoryInterface
             throw new Exception\InvalidArgumentException(
                 sprintf(
                     'Invalid %s constructor options: %s',
-                    AzureAdapter::class,
+                    AzureBlobStorageAdapter::class,
                     implode(', ', $disallowedOptions)
                 )
             );
