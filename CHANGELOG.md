@@ -1,3 +1,10 @@
+[4.1.2](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/4.1.1...4.1.2) (2026-08-11)
+
+### Bug Fixes
+* to azure-oss 2.x (CTAP-1228) ([ccdc96a](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/ccdc96a58fb561df261beab53cd8becbbb428ba1))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [4.1.1](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/4.1.0...4.1.1) (2026-08-11)
 
 ### Bug Fixes
