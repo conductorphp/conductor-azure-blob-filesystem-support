@@ -1,6 +1,6 @@
 {
   "name": "conductor/azure-blob-filesystem-support",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Conductor Azure Blob Filesystem Support",
   "type": "library",
   "homepage": "https://github.com/conductorphp/conductor-azure-blob-filesystem-support",
@@ -21,7 +21,7 @@
     "azure-oss/storage-blob-flysystem": "^1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+    "phpunit/phpunit": "^13.0",
     "laminas/laminas-coding-standard": "~1.0.0"
   },
   "autoload": {

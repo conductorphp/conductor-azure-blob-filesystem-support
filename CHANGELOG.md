@@ -1,3 +1,10 @@
+[4.1.1](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/4.1.0...4.1.1) (2026-08-11)
+
+### Bug Fixes
+* to phpunit 13 (CTAP-1226) ([62ca7b2](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/62ca7b29a4679dccb46fb652eea61ff75a73069f))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [4.1.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/4.0.0...4.1.0) (2026-08-10)
 
 ### Features
