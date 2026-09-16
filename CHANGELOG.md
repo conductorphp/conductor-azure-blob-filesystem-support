@@ -1,3 +1,10 @@
+[5.2.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/5.1.0...5.2.0) (2026-09-16)
+
+### Features
+* conductor/core ^6.0 (CTAP-1741) ([559d1b4](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/559d1b4109d143f87ab20b0ec62197cf1465c790))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [5.1.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/5.0.0...5.1.0) (2026-09-14)
 
 ### Features
