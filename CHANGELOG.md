@@ -1,3 +1,10 @@
+[6.0.1](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/6.0.0...6.0.1) (2026-10-11)
+
+### Bug Fixes
+* 6 for master (CTAP-1763) ([b1463f8](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/b1463f8fac9aa7016014b8d3d4e27b9c1c5b0924))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [6.0.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/5.2.0...6.0.0) (2026-10-11)
 
 ### Features

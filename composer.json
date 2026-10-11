@@ -1,6 +1,6 @@
 {
   "name": "conductor/azure-blob-filesystem-support",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Conductor Azure Blob Filesystem Support",
   "type": "library",
   "homepage": "https://github.com/conductorphp/conductor-azure-blob-filesystem-support",
