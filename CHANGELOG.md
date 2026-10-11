@@ -1,3 +1,14 @@
+[6.0.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/5.2.0...6.0.0) (2026-10-11)
+
+### Features
+* conductor/core ^7.0 (CTAP-1760) ([e53b59c](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/e53b59c92f49738d122e8fdb47abd3708b5d7125))
+* conductor/core ^6.0 (CTAP-1741) ([559d1b4](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/559d1b4109d143f87ab20b0ec62197cf1465c790))
+* conductor/core ^5.0 (CTAP-1712) ([3a7a6f7](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/3a7a6f771e15200e049ecef23b6ef4d51b357098))
+### Bug Fixes
+* to azure-oss 2.x (CTAP-1228) ([ccdc96a](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/commit/ccdc96a58fb561df261beab53cd8becbbb428ba1))
+
+<!--- CHANGELOG SPLIT MARKER -->
+
 [5.2.0](https://github.com/conductorphp/conductor-azure-blob-filesystem-support/compare/5.1.0...5.2.0) (2026-09-16)
 
 ### Features
